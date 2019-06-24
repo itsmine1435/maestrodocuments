@@ -22,7 +22,6 @@ public class MaestroDocumentsController {
 	@GetMapping("/getDocuments")
 	public List<Documents> getDocuments() {
 		log.info("Fetching documents");
-
 		List<Documents> docList = new ArrayList<Documents>();
 
 		Documents doc1 = new Documents();
