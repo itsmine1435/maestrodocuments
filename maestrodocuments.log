@@ -1,0 +1,80 @@
+2019-06-10 13:44:31.483  INFO 8240 --- [main] c.m.d.MaestrodocumentsApplication        : Starting MaestrodocumentsApplication on Dhalia-PC-15 with PID 8240 (D:\spring\maestrodocuments\target\classes started by Anagha in D:\spring\maestrodocuments)
+2019-06-10 13:44:31.486  INFO 8240 --- [main] c.m.d.MaestrodocumentsApplication        : No active profile set, falling back to default profiles: default
+2019-06-10 13:44:32.231  INFO 8240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-10 13:44:32.249  INFO 8240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-10 13:44:32.249  INFO 8240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-06-10 13:44:32.323  INFO 8240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-10 13:44:32.324  INFO 8240 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 800 ms
+2019-06-10 13:44:32.489  INFO 8240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-10 13:44:32.619 ERROR 8240 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.maestro.documents.MaestrodocumentsApplication.main(MaestrodocumentsApplication.java:10) [classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_181]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1116) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1202) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	... 14 common frames omitted
+
+2019-06-10 13:44:32.625  INFO 8240 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-06-10 13:44:32.633  INFO 8240 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-10 13:44:32.637 ERROR 8240 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-06-10 13:44:32.639  INFO 8240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-10 13:44:44.695  INFO 10196 --- [main] c.m.d.MaestrodocumentsApplication        : Starting MaestrodocumentsApplication on Dhalia-PC-15 with PID 10196 (D:\spring\maestrodocuments\target\classes started by Anagha in D:\spring\maestrodocuments)
+2019-06-10 13:44:44.698  INFO 10196 --- [main] c.m.d.MaestrodocumentsApplication        : No active profile set, falling back to default profiles: default
+2019-06-10 13:44:45.385  INFO 10196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-10 13:44:45.403  INFO 10196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-10 13:44:45.404  INFO 10196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-06-10 13:44:45.467  INFO 10196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-10 13:44:45.468  INFO 10196 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 736 ms
+2019-06-10 13:44:45.628  INFO 10196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-10 13:44:45.759  INFO 10196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-10 13:44:45.762  INFO 10196 --- [main] c.m.d.MaestrodocumentsApplication        : Started MaestrodocumentsApplication in 1.324 seconds (JVM running for 1.75)
+2019-06-10 13:45:00.602  INFO 10196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-10 13:45:00.603  INFO 10196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-10 13:45:00.608  INFO 10196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-06-10 13:45:00.627  INFO 10196 --- [http-nio-8080-exec-1] c.m.d.c.MaestroDocumentsController       : Fetching documents
+2019-06-10 13:46:34.012  INFO 10832 --- [main] c.m.d.MaestrodocumentsApplicationTests   : Starting MaestrodocumentsApplicationTests on Dhalia-PC-15 with PID 10832 (started by Anagha in D:\spring\maestrodocuments)
+2019-06-10 13:46:34.014  INFO 10832 --- [main] c.m.d.MaestrodocumentsApplicationTests   : No active profile set, falling back to default profiles: default
+2019-06-10 13:46:35.579  INFO 10832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-10 13:46:35.878  INFO 10832 --- [main] c.m.d.MaestrodocumentsApplicationTests   : Started MaestrodocumentsApplicationTests in 2.154 seconds (JVM running for 2.956)
+2019-06-10 13:46:41.823  INFO 10832 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-10 14:01:11.176  INFO 10196 --- [RMI TCP Connection(27)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-10 14:01:11.179  INFO 10196 --- [RMI TCP Connection(27)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
