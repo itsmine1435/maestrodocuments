@@ -41,4 +41,9 @@ public class MaestroDocumentsController {
 		return docList;
 
 	}
+	@RequestMapping("/home")
+	public void home()
+	{
+		log.info("home page");
+	}
 }
